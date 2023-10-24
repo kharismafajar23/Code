@@ -1,0 +1,710 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap');
+
+:root {
+  /* color */
+  --coklat-color: rgba(138, 80, 66, 1);
+  --white-color: rgba(255, 255, 255, 1);
+  --black-color: rgba(51, 51, 51, 1);
+
+  /* Font */
+  --great-font: 'Great Vibes', cursive;
+  --nunito-font: 'Nunito Sans', sans-serif;
+
+  /* Font Weight */
+  --light-weight: 300;
+  --regular-weight: 400;
+  --semi-bold-weight: 500;
+  --bold-weight: 700;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: hsl(228, 8%, 76%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(228, 8%, 64%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(228, 8%, 54%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--nunito-font);
+  color: var(--coklat-color);
+}
+
+body {
+  background-color: rgba(253, 245, 242, 1);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  outline: 1px solid var(--black-color);
+}
+
+input:active,
+input:focus {
+  outline: 1px solid var(--coklat-color);
+  border: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section_title {
+  font-family: var(--great-font);
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.section_subtitle {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.section_desc {
+  font-size: 1.125rem;
+  font-weight: var(--light-weight);
+  line-height: 149%;
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 4px;
+}
+
+.hero {
+  background: linear-gradient(rgba(217, 217, 217, 0), rgba(115, 115, 115, 1)), center / cover no-repeat url('../images/hero_img.jpg');
+}
+
+.hero_container {
+  height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(219, 28%, 16%, 0.7);
+  padding: 2rem 1rem;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  opacity: 1;
+  transition: 0.4s;
+  z-index: 200;
+  overflow-y: hidden;
+}
+
+.popup_content {
+  position: relative;
+  background-color: var(--white-color);
+  padding: 36px;
+  border-radius: 1.5rem;
+  max-width: 550px;
+}
+
+.popup_img {
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.popup_title {
+  font-size: 2rem;
+  font-family: var(--great-font);
+  margin-bottom: 4px;
+}
+
+.popup_desc {
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.hero_kepada {
+  margin-bottom: auto;
+}
+
+.kepada_nama_desc {
+  font-size: 1rem;
+  color: white;
+  font-weight: var(--bold-weight);
+}
+
+#nama {
+  font-size: 2rem;
+  color: white;
+}
+
+.hero_data {
+  margin-top: auto;
+  color: var(--white-color);
+}
+
+.popup_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn_popup_name {
+  margin-top: 12px;
+}
+
+.btn_popup {
+  font-weight: var(--bold-weight);
+  cursor: pointer;
+  color: var(--white-color);
+  background-color: var(--coklat-color);
+  outline: none;
+  margin-top: 12px;
+}
+
+.hero_data .section_title {
+  font-family: var(--great-font);
+}
+
+.btn_hero {
+  color: white;
+  background-color: var(--coklat-color);
+}
+
+.tanggal {
+  position: relative;
+  background: center / cover no-repeat url(../images/bg_section.jpg);
+}
+
+.acc_img_1,
+.acc_img_2,
+.acc_img_3,
+.acc_img_4 {
+  position: absolute;
+}
+
+.acc_img_1 {
+  top: 0;
+  left: 0;
+  width: 301px;
+}
+
+.acc_img_2 {
+  top: 0;
+  right: 0;
+  width: 185px;
+}
+
+.acc_img_3 {
+  bottom: 0;
+  right: 0;
+  width: 291px;
+}
+
+.acc_img_4 {
+  bottom: 7px;
+  left: -8px;
+  transform: rotate(270deg);
+  width: 150px;
+}
+
+.tanggal_container {
+  padding: 150px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.tanggal_img img {
+  object-fit: cover;
+  width: 315px;
+  height: 380px;
+  border-top-right-radius: 160px;
+  border-top-left-radius: 160px;
+  outline: 5px solid var(--white-color);
+}
+
+.tanggal_data {
+  text-align: center;
+}
+
+.tanggal_countdown_area {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+}
+
+.tanggal_countdown_box {
+  padding: 6px 15px;
+  color: var(--white-color);
+  background-color: var(--coklat-color);
+  border-radius: 4px;
+}
+
+.countdown_number {
+  font-size: 1.5rem;
+  font-weight: var(--semi-bold-weight);
+}
+
+.countdown_desc {
+  font-size: 0.75rem;
+}
+
+.mempelai {
+  padding: 50px 0;
+  text-align: center;
+  background: center / cover no-repeat url(../images/bg_section.jpg);
+}
+
+.mempelai_container {
+  padding: 60px 0;
+  background-color: rgba(255, 255, 255, 0.79);
+  border-radius: 4px;
+}
+
+.mempelai_salam {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.mempelai_salam2 {
+  font-size: 1.25rem;
+  font-weight: var(--bold-weight);
+  margin-bottom: 12px;
+}
+.mempelai_container .section_desc {
+  max-width: 610px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.mempelai_couple {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.mempelai_img {
+  width: 156px;
+  height: 185px;
+  object-fit: cover;
+  border-top-right-radius: 100px;
+  border-top-left-radius: 100px;
+  outline: 5px solid var(--coklat-color);
+  margin-bottom: 17px;
+}
+
+.mempelai_accent {
+  font-size: 3rem;
+  font-family: var(--great-font);
+}
+
+.mempelai_nama {
+  font-size: 2rem;
+  font-family: var(--great-font);
+}
+
+.mempelai_keterangan {
+  font-size: 1rem;
+  font-weight: var(--bold-weight);
+}
+
+.mempelai_parent {
+  font-size: 0.9rem;
+  font-weight: var(--light-weight);
+}
+
+.acara {
+  padding: 80px 0;
+  background-color: rgba(253, 245, 242, 1);
+}
+
+.acara_cards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+}
+
+.acara_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 35px 40px;
+  border: 1px solid var(--coklat-color);
+  text-align: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.acara_card .acc_img_1,
+.acara_card .acc_img_2,
+.acara_card .acc_img_3,
+.acara_card .acc_img_4 {
+  filter: opacity(0.3);
+}
+
+.acara_card .acc_img_1,
+.acara_card .acc_img_4 {
+  width: 132px;
+}
+
+.acara_card .acc_img_2 {
+  width: 92px;
+}
+
+.acara_card .acc_img_3 {
+  width: 160px;
+}
+
+.acara_card_icon {
+  width: 46px;
+  object-fit: cover;
+  margin-bottom: 22px;
+}
+
+.acara_card_title {
+  font-size: 1.5rem;
+  font-family: var(--great-font);
+  font-weight: lighter;
+}
+
+.acara_card_time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.acara_card_detail {
+  padding: 0 28px;
+  margin: 8px 0 14px;
+}
+
+.acara_card_detail:nth-child(2) {
+  border-right: 1px solid var(--coklat-color);
+  border-left: 1px solid var(--coklat-color);
+}
+
+.acara_card_detail_hari,
+.acara_card_detail_tanggal,
+.acara_card_detail_tahun,
+.acara_card_detail_bulan {
+  font-family: var(--great-font);
+  font-weight: lighter;
+  font-size: 1.125rem;
+}
+
+.acara_card_detail_tanggal {
+  font-size: 2rem;
+}
+
+.acara_jam {
+  font-weight: var(--bold-weight);
+  color: var(--black-color);
+}
+
+.icon_jam {
+  margin-right: 4px;
+}
+
+.acara_card_location_data {
+  margin: 28px 0 14px;
+}
+
+.acara_card_location_title {
+  font-size: 1.2rem;
+  font-family: var(--great-font);
+  font-weight: lighter;
+}
+
+.acara_card_location_desc {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn_lokasi {
+  color: white;
+  background-color: var(--coklat-color);
+}
+
+.icon_map {
+  margin-right: 4px;
+  font-size: 1rem;
+}
+
+.closing {
+  position: relative;
+  padding: 70px 0;
+  background: center / cover no-repeat url(../images/bg_section.jpg);
+}
+
+.closing_container {
+  background-color: rgba(255, 255, 255, 0.79);
+  padding: 57px 0;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.closing_ayat {
+  max-width: 576px;
+  margin-bottom: 20px;
+  color: var(--black-color);
+}
+
+.closing_surah {
+  margin-bottom: 37px;
+  color: var(--black-color);
+}
+
+.closing_imgs {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.closing_img {
+  width: 125px;
+}
+
+.closing_imgs {
+  margin-bottom: 32px;
+}
+
+.closing_statement {
+  color: var(--black-color);
+  max-width: 497px;
+  margin-bottom: 10px;
+}
+
+.closing_salam {
+  color: var(--black-color);
+}
+
+.closing_family {
+  margin-top: 20px;
+  color: var(--black-color);
+}
+
+.closing_family_title {
+  font-size: 1rem;
+  color: var(--black-color);
+  margin-bottom: 10px;
+}
+
+.closing_family_name {
+  font-size: 2rem;
+  font-family: var(--great-font);
+  font-weight: lighter;
+  color: var(--coklat-color);
+}
+
+.closing .acc_img_1,
+.closing .acc_img_4 {
+  width: 201px;
+}
+
+.closing .acc_img_2 {
+  width: 150px;
+}
+
+.closing .acc_img_3 {
+  width: 269px;
+}
+
+.closing .acc_img_4 {
+  bottom: 11px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 50px 60px;
+  }
+
+  .section_desc {
+    font-size: 1rem;
+    max-width: 450px !important;
+  }
+
+  .tanggal_container {
+    justify-content: space-around;
+  }
+
+  .tanggal_img img {
+    width: 270px;
+    height: 320px;
+  }
+
+  .mempelai_salam2 {
+    font-size: 1rem;
+  }
+
+  .mempelai_nama {
+    font-size: 1.8rem;
+  }
+
+  .acara_cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .acara_card {
+    max-width: 60%;
+  }
+
+  .closing_container {
+    z-index: 10;
+  }
+
+  .closing_ayat {
+    max-width: 525px;
+  }
+
+  .acc_img_1 {
+    width: 220px;
+  }
+
+  .acc_img_2 {
+    width: 120px;
+  }
+
+  .acc_img_3 {
+    width: 215px;
+  }
+
+  .acc_img_4 {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .section {
+    padding: 20px;
+  }
+
+  .tanggal_container {
+    padding: 90px 0;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .mempelai_container {
+    padding: 40px 23px;
+  }
+
+  .mempelai_couple {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .acara_card {
+    max-width: 85%;
+  }
+
+  .acara_card .acc_img_1,
+  .acara_card .acc_img_4 {
+    width: 111px;
+  }
+
+  .acara_card .acc_img_2 {
+    width: 72px;
+  }
+
+  .acara_card .acc_img_3 {
+    width: 120px;
+  }
+
+  .closing_container {
+    padding: 40px 23px;
+  }
+
+  .closing p {
+    font-size: 0.9rem;
+  }
+
+  .closing_imgs {
+    gap: 10px;
+  }
+
+  .closing_img {
+    width: 76px;
+  }
+
+  .closing .acc_img_1 {
+    width: 120px;
+  }
+
+  .closing .acc_img_2 {
+    width: 90px;
+  }
+
+  .closing .acc_img_3 {
+    width: 165px;
+  }
+
+  .closing .acc_img_4 {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .acara_card {
+    max-width: 95%;
+  }
+
+  .acara_card_time {
+    justify-content: space-evenly;
+  }
+
+  .closing_img {
+    width: 52px;
+  }
+}
